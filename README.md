@@ -1,9 +1,6 @@
-# docker_setup
-#TODO
-Yo nerds, here is a very basic Docker-Python setup that should solve most Python Docker problems.
+# dash_app_sample
+This is a generic Docker-Python setup with a very simple Dash app.
 
-I use a Mac and find it a million times easier for this stuff. Don't ask for Windows stuff, I'm a statistician turned
-data scientist so I'm not an expert on this stuff.
 
 ## Setup
 
@@ -16,18 +13,10 @@ data scientist so I'm not an expert on this stuff.
 make -v
 ```
 
-3. Clone this repo. If this is new for you, follow this. But setup ssh keys, it is much better...
-    - https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository
-
 ## How do I use this Shiz?
-
-1. Open this in some IDE. I highly recommend PyCharm, but it doesn't matter much. Collegues recommend Atom and VS Code.
-2. In the terminal, run the make commands (see next section)
+1. In the terminal, run the make commands (see next section)
     - Note, Docker needs to be running. Look for the cute whaleboat!
-
-3. Load any packages you need installed in the requirements.txt file.
-    - I set it up to install the most recent versions of Jupyter and Pandas
-    - Eventually, you'll want to lock down all the package versions
+2. Build then run
 
 ## Commands
 
@@ -45,7 +34,7 @@ make help
 make build
 ```
 
-3. run: Run src/main.py script.
+3. run: Run the app.
 
 ```
 make run
