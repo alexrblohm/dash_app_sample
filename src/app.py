@@ -39,7 +39,7 @@ app.layout = html.Div([
         columns=[dict(id=i, name=i, type='numeric') for i in data.columns],
         editable=True
     ),
-dcc.ConfirmDialogProvider(
+    dcc.ConfirmDialogProvider(
         children=html.Button('Save Adjustment'),
         id='submit_button',
         message='Are you sure you want to save your Forecast adjustment?'
@@ -77,6 +77,7 @@ def update_output(submit_n_clicks, data, columns):
         df = pd.DataFrame(data, columns=[c['name'] for c in columns])
         AWS.put_object_to_s3(df, key='test.csv')
         return f"Forecast adjustments were saved! Sent {submit_n_clicks} times."
+
 
 if __name__ == '__main__':
     app.run_server(host='0.0.0.0', debug=True, port=8050)
